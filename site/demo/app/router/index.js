@@ -4,22 +4,20 @@
 import React from 'react';
 import {Switch, Route, Router} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
-import Demo from '../index';
+import BaseDemo from '../base';
+import BusinessDemo from '../business';
 
 const history = createBrowserHistory();
 
-const HomePage = () => {
-    return (
-        <div>首页</div>
-    );
-};
+const HomePage = () => <div>首页</div>;
 
 export default () => {
     return (
         <Router history={history}>
             <Switch>
                 <Route exact strict path="/" component={HomePage}/>
-                <Route path="/demo" component={Demo}/>
+                <Route path="/demo/base" component={BaseDemo}/>
+                <Route path="/demo/business" component={BusinessDemo}/>
             </Switch>
         </Router>
     );

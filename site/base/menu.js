@@ -3,6 +3,11 @@ export const button = {
     name: 'Button 按钮',
 };
 
+export const table = {
+    path: '/base/table',
+    name: 'Table 表格',
+};
+
 export const icon = {
     path: '/base/icon',
     name: 'Icon 图标',
@@ -196,11 +201,6 @@ export const tag = {
 export const tabs = {
     path: '/base/tabs',
     name: 'Tabs 标签页',
-};
-
-export const table = {
-    path: '/base/table',
-    name: 'Table 表格',
 };
 
 export const alert = {

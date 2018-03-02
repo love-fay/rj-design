@@ -6,13 +6,14 @@ import {
     list, popover, tree, tooltip, timeLine, tag, tabs, table, alert, modal, message, notification, progress,
     popconfirm, spin, anchor, backTop, divider, localeProvider
 } from './menu';
-import Home from '../home';
 import Button from './button';
 import Icon from './icon';
 import Grid from './grid';
 import Layout from './layout';
 import Table from './table';
 import Wait from './wait';
+
+const Home = () => <div>基础组件</div>;
 
 export const getBasicComponentContent = {
     ['/base']: {

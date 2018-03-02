@@ -1,12 +1,13 @@
 import React from 'react';
 import Button from './button/index';
+import Table from './table/index';
 
 export const getComponentContent = {
     ['button']: {
         component: (props) => <Button {...props}/>
     },
-    ['icon']: {
-        component: <Button/>
+    ['table']: {
+        component: (props) => <Table {...props}/>
     },
     ['grid']: {
         component: <Button/>

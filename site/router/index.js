@@ -5,21 +5,28 @@ import React from 'react';
 import {Switch, Route, Router, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import Base from '../base';
+import Business from '../business';
+import Home from '../home';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import { purple, green } from 'material-ui/colors';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: { main: purple[500] },
+        secondary: { main: green[500] },
+    },
+});
 
 const history = createBrowserHistory();
 
-const HomePage = () => {
-    return (
-        <Link to='/base'>榕基组件库</Link>
-    );
-};
-
 export default () => {
     return (
+        <MuiThemeProvider theme={theme}>
         <Router history={history}>
             <Switch>
-                <Route exact strict path="/" component={HomePage}/>
+                <Route exact strict path="/" component={Home}/>
                 <Route path="/base" component={Base}/>
+                <Route path="/business" component={Business}/>
                 {/*<Route path='/404' component={error.E404}/>*/}
                 {/*<Route path='/401D3' component={error.E401D3}/>*/}
                 {/*<Route path='/login' component={Login}/>*/}
@@ -28,5 +35,6 @@ export default () => {
                 {/*<Route component={error.E404}/>*/}
             </Switch>
         </Router>
+        </MuiThemeProvider>
     );
 }

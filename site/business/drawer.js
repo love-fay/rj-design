@@ -164,9 +164,9 @@ class PersistentDrawer extends React.Component {
         history.push('/');
     };
 
-    toBusiness = () => {
+    toBase = () => {
         const {history} = this.props;
-        history.push('/business');
+        history.push('/base');
     };
 
     toGitlab = () => {
@@ -244,8 +244,10 @@ class PersistentDrawer extends React.Component {
                             <Typography type="title" color="inherit" noWrap className={classes.title}>
                                 {getBasicComponentContent[pathname].name}
                             </Typography>
-                            <Button color="inherit" onClick={this.toBusiness}>业务组件</Button>
-                            <Button color="inherit" onClick={this.toGitlab}><Gitlab/></Button>
+                            <Button color="inherit" onClick={this.toBase}>基础组件</Button>
+                            <Button color="inherit" onClick={this.toGitlab}>
+                                <Gitlab/>
+                            </Button>
                         </Toolbar>
                     </AppBar>
                     {drawer}

@@ -1,4 +1,5 @@
 const name = '榕基组件库';
-const demoServer = 'http://127.0.0.1:3001/demo/';
+const demoBaseServer = 'http://127.0.0.1:3001/demo/base/';
+const demoBusinessServer = 'http://127.0.0.1:3001/demo/business/';
 
-export {name, demoServer};
+export {name, demoBaseServer, demoBusinessServer};

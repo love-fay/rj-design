@@ -6,7 +6,7 @@ export default ({location}) => {
     const pathArr = pathname.split('/');
     return (
         <div style={{padding:'50px 10px 0 16px'}}>
-            {getComponentContent[pathArr[2]].component({path:pathArr[3]})}
+            {getComponentContent[pathArr[3]].component({path:pathArr[4]})}
         </div>
     )
 }
